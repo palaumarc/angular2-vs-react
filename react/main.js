@@ -18,29 +18,10 @@ const App = React.createClass({
           <button><Link to="/messages/2">Message 2</Link></button>
           <button><Link to="/messages/5">Message 5</Link></button>
           <button><Link to="/messages/1">Message 1</Link></button>
+          <button><Link to="/ajaxdemo">AJAX Demo</Link></button>
         </nav>
         <br />
         {this.props.children}
-      </div>
-    )
-  }
-})
-
-const NoMatch = React.createClass({
-  render: function() {
-    return (
-      <div>
-        This is NoMatch
-      </div>
-    )
-  }
-})
-
-const Messages = React.createClass({
-  render: function() {
-    return (
-      <div>
-        We have message {this.props.params.id}. The ID has been magically given by the router!!
       </div>
     )
   }
@@ -51,8 +32,8 @@ ReactDOM.render((
     <Route path="/" component={App}>
       <Route path="databindingdemo" component={DataBindingDemo}/>
       <Route path="multiplecomponentsdemo" component={FriendsContainer}/>
-      <Route path="messages/:id" component={Messages}/>
-      <Route path="*" component={NoMatch}/>
+      <Route path="messages/:id" component={MessagesDemo}/>
+      <Route path="ajaxdemo" component={AjaxDemo}/>
     </Route>
   </Router>
 ), document.getElementById('app'));
