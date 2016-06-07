@@ -21,7 +21,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <button><a [routerLink]=\"['DataBindingDemo']\">Data Binding Demo</a></button>\n      <button><a [routerLink]=\"['MultipleComponentsDemo']\">Multiple Component Demo</a></button>\n      <button><a [routerLink]=\"['Message', {id:2}]\">Message 2</a></button>\n      <button><a [routerLink]=\"['Message', {id:5}]\">Message 5</a></button>\n      <button><a [routerLink]=\"['Message', {id:1}]\">Message 1</a></button>\n      <button><a [routerLink]=\"['LeafletDemo']\">Leaflet</a></button>\n    </nav>\n    <br />\n    <router-outlet></router-outlet>\n  ",
+            styleUrls: ['app/app.component.css'],
+            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <ul>\n        <li><a [routerLink]=\"['DataBindingDemo']\">Data Binding Demo</a></li>\n        <li><a [routerLink]=\"['MultipleComponentsDemo']\">Multiple Component Demo</a></li>\n        <li><a [routerLink]=\"['Message', {id:2}]\">Message 2</a></li>\n        <li><a [routerLink]=\"['Message', {id:5}]\">Message 5</a></li>\n        <li><a [routerLink]=\"['Message', {id:1}]\">Message 1</a></li>\n        <li><a [routerLink]=\"['LeafletDemo']\">Leaflet</a></li>\n      </ul>\n    </nav>\n    <br />\n    <router-outlet></router-outlet>\n  ",
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [
                 router_deprecated_1.ROUTER_PROVIDERS,
