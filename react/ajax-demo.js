@@ -16,7 +16,7 @@ const AjaxDemo = React.createClass({
       .then(response => {
         return response.text()
       }).then(body => {
-        this.setState({ httpResponseData: JSON.parse(body) });
+        this.setState({ data: JSON.parse(body) });
       });
   },
 
