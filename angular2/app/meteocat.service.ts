@@ -10,7 +10,7 @@ export class MeteocatService {
 
   constructor(private http: Http) {};
 
-  getData(): Promise<String[]> {
+  getData(): Promise<any> {
     return this.http.get(this.url)
       .toPromise()
       .then(response => response.json())
