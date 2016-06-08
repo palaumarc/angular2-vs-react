@@ -62,7 +62,7 @@ var List = React.createClass({
   render: function(){
     var listItems = this.props.items.map (
       (item,index) => (
-          <li key={index}> {item} 
+          <li key={index}> {item}
             <button onClick={this.handleRemoveItem.bind(null, index)}> Remove </button>
           </li>
         )
