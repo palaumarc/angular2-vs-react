@@ -12,7 +12,9 @@ var core_1 = require('@angular/core');
 var data_binding_demo_component_1 = require('./data-binding-demo.component');
 var multiple_components_demo_component_1 = require('./multiple-components-demo.component');
 var message_component_1 = require('./message.component');
+var ajax_demo_component_1 = require('./ajax-demo.component');
 var router_deprecated_1 = require('@angular/router-deprecated');
+var meteocat_service_1 = require('./meteocat.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular2 Demos';
@@ -20,10 +22,11 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <button><a [routerLink]=\"['DataBindingDemo']\">Data Binding Demo</a></button>\n      <button><a [routerLink]=\"['MultipleComponentsDemo']\">Multiple Component Demo</a></button>\n      <button><a [routerLink]=\"['Message', {id:2}]\">Message 2</a></button>\n      <button><a [routerLink]=\"['Message', {id:5}]\">Message 5</a></button>\n      <button><a [routerLink]=\"['Message', {id:1}]\">Message 1</a></button>\n    </nav>\n    <br />\n    <router-outlet></router-outlet>\n  ",
+            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <button><a [routerLink]=\"['DataBindingDemo']\">Data Binding Demo</a></button>\n      <button><a [routerLink]=\"['MultipleComponentsDemo']\">Multiple Component Demo</a></button>\n      <button><a [routerLink]=\"['Message', {id:2}]\">Message 2</a></button>\n      <button><a [routerLink]=\"['Message', {id:5}]\">Message 5</a></button>\n      <button><a [routerLink]=\"['Message', {id:1}]\">Message 1</a></button>\n      <button><a [routerLink]=\"['AjaxDemo']\">AJAX Demo</a></button>\n    </nav>\n    <br />\n    <router-outlet></router-outlet>\n  ",
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [
                 router_deprecated_1.ROUTER_PROVIDERS,
+                meteocat_service_1.MeteocatService
             ]
         }),
         router_deprecated_1.RouteConfig([
@@ -41,6 +44,11 @@ var AppComponent = (function () {
                 path: '/messages/:id',
                 name: 'Message',
                 component: message_component_1.MessageComponent
+            },
+            {
+                path: '/ajaxdemo',
+                name: 'AjaxDemo',
+                component: ajax_demo_component_1.AjaxDemoComponent
             }
         ]), 
         __metadata('design:paramtypes', [])
