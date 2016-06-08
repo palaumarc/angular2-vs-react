@@ -1,3 +1,4 @@
+// Main container that holds real state
 var FriendsContainer = React.createClass({
   getInitialState: function(){
     return {
@@ -28,6 +29,7 @@ var FriendsContainer = React.createClass({
   }
 });
 
+// Stateless component used to add items to the list
 var AddFriendDialog = React.createClass({
   getInitialState: function(){
     return {
@@ -55,6 +57,7 @@ var AddFriendDialog = React.createClass({
   }
 });
 
+// Stateless component used to visualize the list (which is past via props from its parent)
 var List = React.createClass({
   handleRemoveItem: function(indexOfItemToRemove) {
     this.props.removeItem(indexOfItemToRemove);
