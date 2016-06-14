@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['node_modules/leaflet/dist/leaflet.css', 'app/leaflet-demo.component.css'],
   template: `
         <h3>{{title}}</h3>
-        <div id="LeafletDemoComponent" lf-center="center" height="480px" width="640px"></div>
+        <div id="LeafletDemoComponent" style="height: 600px;" ></div>
   `,
   //providers: [BrowserDomAdapter],
 })
@@ -22,14 +22,14 @@ export class LeafletDemoComponent{
   }
 
   paintMap = () => {
-    var map = L.map('LeafletDemoComponent').setView([51.505, -0.09], 13);
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    var map = L.map('LeafletDemoComponent').setView([41.38339155, 2.13980198], 16);
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
     }).addTo(map);
 
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
+    L.marker([41.38339155, 2.13980198]).addTo(map);
+
   }
 }
