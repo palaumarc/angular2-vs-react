@@ -1,5 +1,4 @@
 # angular2-vs-react
-
 Set of simple exercises comparing Angular2 and React, covering the following topics:
 
 - Data binding (One-way & Two-way)
@@ -11,7 +10,6 @@ Set of simple exercises comparing Angular2 and React, covering the following top
 - External services interaction (e.g consuming REST APIs)
 
 ## Execution
-
 To run the demo suite you will need NodeJS and NPM. We recommend doing it through NVM (Node Version Manager)
 
     cd ~
@@ -23,7 +21,6 @@ Close the terminal and reopen it again. After that install the last version of N
     nvm alias default node 
 
 ### Angular2 suite
-
 To execute the Angular2 demo suite:
 
     cd angular2
@@ -33,12 +30,11 @@ To execute the Angular2 demo suite:
 After that, you can access the demo using a browser (Chrome or Firefox) at http://localhost:3000 (by default)
 
 ### ReactJS suite
-
 To execute ReactJS demo suite we will use http-server. First of all, install it globally:
 
     npm install -g http-server
 
-After that, we can use it to serve static content from a chosen directory. From root folder:
+Now we can use it to serve static content from a chosen directory. From root folder execute:
 
     http-server react/
 
